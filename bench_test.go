@@ -38,9 +38,9 @@ func isTested(name string) bool {
 }
 
 func calcMem(name string, load func()) {
-	if !isTested(name) {
-		return
-	}
+	// if !isTested(name) {
+	// 	return
+	// }
 
 	m := new(runtime.MemStats)
 
@@ -144,9 +144,9 @@ func BenchmarkChi_Param(b *testing.B) {
 // func BenchmarkCloudyKitRouter_Param(b *testing.B) {
 // 	router := loadCloudyKitRouterSingle("GET", "/user/:name", cloudyKitRouterHandler)
 
-// 	r, _ := http.NewRequest("GET", "/user/gordon", nil)
-// 	benchRequest(b, router, r)
-// }
+//		r, _ := http.NewRequest("GET", "/user/gordon", nil)
+//		benchRequest(b, router, r)
+//	}
 func BenchmarkDenco_Param(b *testing.B) {
 	router := loadDencoSingle("GET", "/user/:name", dencoHandler)
 
@@ -269,9 +269,9 @@ func BenchmarkR2router_Param(b *testing.B) {
 // func BenchmarkRevel_Param(b *testing.B) {
 // 	router := loadRevelSingle("GET", "/user/:name", "RevelController.Handle")
 
-// 	r, _ := http.NewRequest("GET", "/user/gordon", nil)
-// 	benchRequest(b, router, r)
-// }
+//		r, _ := http.NewRequest("GET", "/user/gordon", nil)
+//		benchRequest(b, router, r)
+//	}
 func BenchmarkRivet_Param(b *testing.B) {
 	router := loadRivetSingle("GET", "/user/:name", rivetHandler)
 
@@ -355,9 +355,9 @@ func BenchmarkChi_Param5(b *testing.B) {
 // func BenchmarkCloudyKitRouter_Param5(b *testing.B) {
 // 	router := loadCloudyKitRouterSingle("GET", fiveColon, cloudyKitRouterHandler)
 
-// 	r, _ := http.NewRequest("GET", fiveRoute, nil)
-// 	benchRequest(b, router, r)
-// }
+//		r, _ := http.NewRequest("GET", fiveRoute, nil)
+//		benchRequest(b, router, r)
+//	}
 func BenchmarkDenco_Param5(b *testing.B) {
 	router := loadDencoSingle("GET", fiveColon, dencoHandler)
 
@@ -480,9 +480,9 @@ func BenchmarkR2router_Param5(b *testing.B) {
 // func BenchmarkRevel_Param5(b *testing.B) {
 // 	router := loadRevelSingle("GET", fiveColon, "RevelController.Handle")
 
-// 	r, _ := http.NewRequest("GET", fiveRoute, nil)
-// 	benchRequest(b, router, r)
-// }
+//		r, _ := http.NewRequest("GET", fiveRoute, nil)
+//		benchRequest(b, router, r)
+//	}
 func BenchmarkRivet_Param5(b *testing.B) {
 	router := loadRivetSingle("GET", fiveColon, rivetHandler)
 
@@ -566,9 +566,9 @@ func BenchmarkChi_Param20(b *testing.B) {
 // func BenchmarkCloudyKitRouter_Param20(b *testing.B) {
 // 	router := loadCloudyKitRouterSingle("GET", twentyColon, cloudyKitRouterHandler)
 
-// 	r, _ := http.NewRequest("GET", twentyRoute, nil)
-// 	benchRequest(b, router, r)
-// }
+//		r, _ := http.NewRequest("GET", twentyRoute, nil)
+//		benchRequest(b, router, r)
+//	}
 func BenchmarkDenco_Param20(b *testing.B) {
 	router := loadDencoSingle("GET", twentyColon, dencoHandler)
 
@@ -691,9 +691,9 @@ func BenchmarkR2router_Param20(b *testing.B) {
 // func BenchmarkRevel_Param20(b *testing.B) {
 // 	router := loadRevelSingle("GET", twentyColon, "RevelController.Handle")
 
-// 	r, _ := http.NewRequest("GET", twentyRoute, nil)
-// 	benchRequest(b, router, r)
-// }
+//		r, _ := http.NewRequest("GET", twentyRoute, nil)
+//		benchRequest(b, router, r)
+//	}
 func BenchmarkRivet_Param20(b *testing.B) {
 	router := loadRivetSingle("GET", twentyColon, rivetHandler)
 
@@ -773,9 +773,9 @@ func BenchmarkChi_ParamWrite(b *testing.B) {
 // func BenchmarkCloudyKitRouter_ParamWrite(b *testing.B) {
 // 	router := loadCloudyKitRouterSingle("GET", "/user/:name", cloudyKitRouterHandler)
 
-// 	r, _ := http.NewRequest("GET", "/user/gordon", nil)
-// 	benchRequest(b, router, r)
-// }
+//		r, _ := http.NewRequest("GET", "/user/gordon", nil)
+//		benchRequest(b, router, r)
+//	}
 func BenchmarkDenco_ParamWrite(b *testing.B) {
 	router := loadDencoSingle("GET", "/user/:name", dencoHandlerWrite)
 
@@ -898,9 +898,9 @@ func BenchmarkR2router_ParamWrite(b *testing.B) {
 // func BenchmarkRevel_ParamWrite(b *testing.B) {
 // 	router := loadRevelSingle("GET", "/user/:name", "RevelController.HandleWrite")
 
-// 	r, _ := http.NewRequest("GET", "/user/gordon", nil)
-// 	benchRequest(b, router, r)
-// }
+//		r, _ := http.NewRequest("GET", "/user/gordon", nil)
+//		benchRequest(b, router, r)
+//	}
 func BenchmarkRivet_ParamWrite(b *testing.B) {
 	router := loadRivetSingle("GET", "/user/:name", rivetHandlerWrite)
 
